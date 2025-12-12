@@ -160,10 +160,14 @@ const LoginRegisterPage = () => {
     try {
       if (isLogin) {
         // LOGIN
-        const response = await axios.post('http://localhost:4000/api/usuarios/login', {
-            email: formData.email,
-            password: formData.password
-          });
+        const response = await axios.post(
+  `${process.env.REACT_APP_BACKEND_URL}/api/usuarios/login`,
+  {
+    email: formData.email,
+    password: formData.password
+  }
+);
+
           
         localStorage.setItem('token', response.data.token);
         setNotification({ message: 'Inicio de sesión exitoso', type: 'success', visible: true });
