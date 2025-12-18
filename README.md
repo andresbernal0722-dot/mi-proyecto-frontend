@@ -1,70 +1,174 @@
-# Getting Started with Create React App
+# Suono Logistic 🚚📦
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descripción del Proyecto
 
-## Available Scripts
+*Suono Logistic* es una aplicación web enfocada en la gestión logística, desarrollada para optimizar el control de procesos, eventos y operaciones internas. El sistema permite administrar información de manera centralizada a través de un panel administrativo, facilitando la organización, el seguimiento y la toma de decisiones.
 
-In the project directory, you can run:
+El proyecto está construido bajo una arquitectura *full stack, utilizando **React con JavaScript* para el frontend, *Node.js y Express* para el backend y *MongoDB Atlas* como base de datos en la nube.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tecnologías Utilizadas
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Frontend
 
-### `npm test`
+* React.js
+* JavaScript
+* HTML5
+* CSS3
+* Create React App
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Backend
 
-### `npm run build`
+* Node.js
+* Express.js
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Base de Datos
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* MongoDB Atlas (NoSQL)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Otras Herramientas
 
-### `npm run eject`
+* npm
+* Git y GitHub
+* API REST
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Estructura General del Proyecto
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+El proyecto se divide en dos partes principales:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* *Frontend:* Interfaz gráfica desarrollada en React, encargada de la experiencia del usuario.
+* *Backend:* Servidor desarrollado con Node.js y Express que gestiona la lógica del negocio y la comunicación con la base de datos.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Scripts Disponibles (Frontend)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+En el directorio del proyecto puedes ejecutar:
 
-### Code Splitting
+### npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Ejecuta la aplicación en modo desarrollo.
 
-### Analyzing the Bundle Size
+Abre [http://localhost:3000](http://localhost:3000) para visualizarla en el navegador. La página se recargará automáticamente cuando realices cambios en el código.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+### npm test
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Inicia el ejecutor de pruebas en modo interactivo.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### npm run build
 
-### Deployment
+Genera la versión de producción de la aplicación en la carpeta build.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+* Optimiza el rendimiento
+* Minifica los archivos
+* Incluye hashes en los nombres para mayor seguridad
 
-### `npm run build` fails to minify
+La aplicación quedará lista para ser desplegada.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+### npm run eject
+
+⚠️ *Advertencia:* Esta acción es irreversible.
+
+Permite personalizar completamente la configuración (Webpack, Babel, ESLint, etc.). No es obligatorio utilizar este comando para la mayoría de los proyectos.
+
+---
+
+## Backend – Configuración Básica
+
+El backend está desarrollado con *Node.js y Express*, e incluye:
+
+* Rutas para la gestión de eventos
+* Controladores para manejar la lógica
+* Modelos conectados a MongoDB Atlas
+* Manejo de sesiones y autenticación
+
+### Ejecutar el servidor backend
+
+bash
+npm install
+npm run dev
+
+
+El servidor se ejecutará en el puerto configurado (por defecto 3000 o 4000).
+
+---
+
+## Base de Datos
+
+La aplicación utiliza *MongoDB Atlas*, una base de datos NoSQL en la nube, que permite:
+
+* Almacenamiento seguro
+* Escalabilidad
+* Acceso remoto
+
+Los modelos están definidos utilizando *Mongoose*, con validaciones para los campos principales.
+
+---
+
+## Funcionalidades Principales
+
+* Panel administrativo
+* Gestión de eventos
+* Conexión con base de datos en la nube
+* Consumo de APIs
+* Arquitectura cliente-servidor
+
+---
+
+## Despliegue
+
+El frontend puede desplegarse en plataformas como:
+
+* Vercel
+  
+
+El backend puede desplegarse en:
+
+* Render
+  
+
+Es importante configurar correctamente las variables de entorno (.env) para la conexión con MongoDB Atlas.
+
+---
+
+## Variables de Entorno
+
+Ejemplo de archivo .env para el backend:
+
+env
+PORT=4000
+MONGODB_URI=mongodb+srv://usuario:password@cluster.mongodb.net/suono_logistic
+SESSION_SECRET=clave_secreta
+
+
+---
+
+## Estado del Proyecto
+
+🚧 Proyecto en desarrollo
+
+Se continúan implementando mejoras en la interfaz, reportes y funcionalidades administrativas.
+
+---
+
+## Autor
+
+Proyecto desarrollado como parte de un proceso académico y práctico enfocado en el desarrollo de aplicaciones web modernas con enfoque logístico.
+
+---
+
+## Documentación Adicional
+
+* React: [https://react.dev/](https://react.dev/)
+* Node.js: [https://nodejs.org/](https://nodejs.org/)
+* MongoDB: [https://www.mongodb.com/](https://www.mongodb.com/)
+* Express: [https://expressjs.com/](https://expressjs.com/)
